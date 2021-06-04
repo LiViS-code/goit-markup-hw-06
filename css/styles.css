@@ -330,6 +330,11 @@ body {
   background-color: var(--accent-color);
 }
 
+/* блок для списка соц. сетей */
+.footer-social {
+  margin-right: 93px;
+}
+
 /* заголовок списка соц. сетей */
 .footer-social .text {
   margin-bottom: 20px;
@@ -357,6 +362,18 @@ body {
 /* иконка соц.сети в футере */
 .footer-social-icon {
   fill: currentColor;
+}
+
+/* заголовок формы */
+.subscribe-text {
+  padding-bottom: 20px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+/* форма подписки */
+.subscribtion-form {
+  display: flex;
 }
 
 /* index.html */
