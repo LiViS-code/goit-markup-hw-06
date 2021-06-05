@@ -71,6 +71,50 @@
                     <use href="./images/icons.svg#icon-close"></use>
                   </svg>
                 </button>
+                <div class="order-box">
+                  <p class="text text-modal">
+                    Оставьте свои данные, мы вам перезвоним
+                  </p>
+                  <form class="frm-order" action="">
+                    <label
+                      >Имя <input class="order-name" type="text" name="name" />
+                      <svg width="12" height="12">
+                        <use href="./images/icons.svg#icon-name"></use>
+                      </svg>
+                    </label>
+                    <label
+                      >Телефон
+                      <input class="order-phone" type="tel" name="phone" />
+                      <svg width="12" height="12">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                    </label>
+                    <label
+                      >Почта
+                      <input class="order-email" type="email" name="email" />
+                      <svg width="12" height="12">
+                        <use href="./images/icons.svg#icon-email"></use>
+                      </svg>
+                    </label>
+                    <label
+                      >Комментарий
+                      <input class="order-note" type="text" name="note"
+                    /></label>
+                    <label>
+                      <input
+                        class="order-chek"
+                        type="checkbox"
+                        name="checkbox"
+                        value="yes"
+                      />
+                      Соглашаюсь с рассылкой и принимаю
+                    </label>
+                    <a class="link link-contract" href="#">Условия договора</a>
+                    <button class="btn active btn-order-submit" type="submit">
+                      Отправить
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -463,7 +507,7 @@
           </address>
         </div>
 
-        <div class="footer-social">
+        <div>
           <p class="text">Присоединяйтесь</p>
           <ul class="list footer-social-list">
             <li class="social-list-item">
@@ -498,7 +542,7 @@
 
         <div class="subscribe-box">
           <p class="text subscribe-text">Подпишитесь на рассылку</p>
-          <form class="subscribtion-form" action="">
+          <form class="frm-subscribe" action="">
             <label>
               <input
                 class="email-subscribe"
@@ -508,6 +552,9 @@
               />
               <button class="btn active btn-subscribe" type="submit">
                 Подписаться
+                <svg class="icon-send" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
               </button>
             </label>
           </form>
