@@ -76,40 +76,68 @@
                     Оставьте свои данные, мы вам перезвоним
                   </p>
                   <form class="frm-order" action="">
-                    <label
-                      >Имя <input class="order-name" type="text" name="name" />
-                      <svg width="12" height="12">
+                    <label class="lbl lbl-name"
+                      >Имя
+                      <svg class="lbl-icon icon-name" width="12" height="12">
                         <use href="./images/icons.svg#icon-name"></use>
                       </svg>
+                      <input
+                        class="order-input order-name"
+                        type="text"
+                        name="name"
+                        placeholder="Василий Лопаткин"
+                      />
                     </label>
-                    <label
+
+                    <label class="lbl lbl-phone"
                       >Телефон
-                      <input class="order-phone" type="tel" name="phone" />
-                      <svg width="12" height="12">
+                      <svg class="lbl-icon icon-phone" width="13" height="13">
                         <use href="./images/icons.svg#icon-phone"></use>
                       </svg>
+                      <input
+                        class="order-input"
+                        type="tel"
+                        name="phone"
+                        placeholder="+38 067 503 44 64"
+                      />
                     </label>
-                    <label
+
+                    <label class="lbl lbl-name"
                       >Почта
-                      <input class="order-email" type="email" name="email" />
-                      <svg width="12" height="12">
+                      <svg class="lbl-icon icon-email" width="15" height="12">
                         <use href="./images/icons.svg#icon-email"></use>
                       </svg>
+                      <input
+                        class="order-input"
+                        type="email"
+                        name="email"
+                        placeholder="lvstv@gmail.com"
+                      />
                     </label>
+
                     <label
                       >Комментарий
-                      <input class="order-note" type="text" name="note"
-                    /></label>
-                    <label>
+                      <textarea
+                        class="order-input order-note"
+                        name="note"
+                        rows="5"
+                        placeholder="Введите текст"
+                      ></textarea>
+                    </label>
+
+                    <label class="lbl-chek">
                       <input
                         class="order-chek"
                         type="checkbox"
                         name="checkbox"
                         value="yes"
                       />
-                      Соглашаюсь с рассылкой и принимаю
+                      Соглашаюсь с рассылкой и принимаю &nbsp;
+                      <a class="link link-contract" href="#" target="_blank"
+                        >Условия договора</a
+                      >
                     </label>
-                    <a class="link link-contract" href="#">Условия договора</a>
+
                     <button class="btn active btn-order-submit" type="submit">
                       Отправить
                     </button>
