@@ -76,71 +76,81 @@
                     Оставьте свои данные, мы вам перезвоним
                   </p>
                   <form class="frm-order" action="">
-                    <label class="lbl lbl-name"
-                      >Имя
-                      <svg class="lbl-icon icon-name" width="12" height="12">
-                        <use href="./images/icons.svg#icon-name"></use>
-                      </svg>
-                      <input
-                        class="order-input order-name"
-                        type="text"
-                        name="name"
-                        placeholder="Василий Лопаткин"
-                      />
-                    </label>
+                    <ul class="list">
+                      <li class="field-item">
+                        <label class="field-lbl" for="name">Имя</label>
+                        <div class="input-field">
+                          <input
+                            class="order-input"
+                            type="text"
+                            name="name"
+                            id="name"
+                          />
+                          <svg class="lbl-icon" width="12" height="12">
+                            <use href="./images/icons.svg#icon-name"></use>
+                          </svg>
+                        </div>
+                      </li>
 
-                    <label class="lbl lbl-phone"
-                      >Телефон
-                      <svg class="lbl-icon icon-phone" width="13" height="13">
-                        <use href="./images/icons.svg#icon-phone"></use>
-                      </svg>
-                      <input
-                        class="order-input"
-                        type="tel"
-                        name="phone"
-                        placeholder="+38 067 503 44 64"
-                      />
-                    </label>
+                      <li class="field-item">
+                        <label class="field-lbl" for="phone">Телефон</label>
+                        <div class="input-field">
+                          <input
+                            class="order-input"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                          />
+                          <svg class="lbl-icon" width="13" height="13">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                          </svg>
+                        </div>
+                      </li>
 
-                    <label class="lbl lbl-name"
-                      >Почта
-                      <svg class="lbl-icon icon-email" width="15" height="12">
-                        <use href="./images/icons.svg#icon-email"></use>
-                      </svg>
-                      <input
-                        class="order-input"
-                        type="email"
-                        name="email"
-                        placeholder="lvstv@gmail.com"
-                      />
-                    </label>
+                      <li class="field-item">
+                        <label class="field-lbl" for="email">Почта</label>
+                        <div class="input-field">
+                          <input
+                            class="order-input"
+                            type="email"
+                            name="email"
+                            id="email"
+                          />
+                          <svg class="lbl-icon" width="15" height="12">
+                            <use href="./images/icons.svg#icon-email"></use>
+                          </svg>
+                        </div>
+                      </li>
 
-                    <label
-                      >Комментарий
-                      <textarea
-                        class="order-input order-note"
-                        name="note"
-                        rows="5"
-                        placeholder="Введите текст"
-                      ></textarea>
-                    </label>
-
-                    <label class="lbl-chek">
-                      <input
-                        class="order-chek"
-                        type="checkbox"
-                        name="checkbox"
-                        value="yes"
-                      />
-                      Соглашаюсь с рассылкой и принимаю &nbsp;
-                      <a class="link link-contract" href="#" target="_blank"
-                        >Условия договора</a
-                      >
-                    </label>
-
-                    <button class="btn active btn-order-submit" type="submit">
-                      Отправить
-                    </button>
+                      <li class="field-item">
+                        <label class="field-lbl"
+                          >Комментарий
+                          <textarea
+                            class="order-input order-note"
+                            name="note"
+                            rows="5"
+                            placeholder="Введите текст"
+                          ></textarea>
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="frm-chek-send">
+                      <label class="lbl-chek">
+                        <input
+                          class="order-chek"
+                          type="checkbox"
+                          name="checkbox"
+                          value="yes"
+                        />
+                        Соглашаюсь с рассылкой и принимаю &nbsp;
+                        <a class="link link-contract" href="#" target="_blank"
+                          >Условия договора</a
+                        >
+                      </label>
+                      <button class="btn active btn-order-submit" type="submit">
+                        Отправить
+                      </button>
+                    </div>
                   </form>
                 </div>
               </div>

@@ -574,7 +574,7 @@ form {
   padding: 0 32px;
 }
 
-/* текст в форме заказа */
+/* текст-призыв в форме заказа */
 .text-modal {
   margin-bottom: 12px;
   text-align: center;
@@ -590,11 +590,14 @@ form {
   letter-spacing: 0.01em;
 }
 
+/* интервал между полями форм */
+.field-item {
+  margin-bottom: 10px;
+}
+
 /* поле ввода в форме заказа */
 .order-input {
   width: 100%;
-  margin-top: 4px;
-  margin-bottom: 10px;
   padding: 12px 0 12px 42px;
   font-size: 16px;
   transition: border var(--transition-duration) var(--timing-function);
@@ -608,48 +611,42 @@ form {
   border: 1px solid var(--accent-color);
 }
 
-.lbl-name {
+/* обертка для поля ввода и иконки */
+.input-field {
   position: relative;
+  margin-top: 4px;
 }
 
+/* общий класс для иконок полей ввода формы */
 .lbl-icon {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 15px;
-  transform: translateY(-10%);
+  /* left: 15px; */
+  transform: translateY(-50%);
   fill: currentColor;
 }
 
-.icon-name {
-  width: 12px;
-  height: 12px;
-}
-
-.icon-phone {
-  width: 13px;
-  height: 13px;
-}
-
-.icon-email {
-  width: 15px;
-  height: 12px;
-}
-
-.lbl:hover .lbl-icon,
-.lbl:focus .lbl-icon {
+/* покраска иконок при фокусе и наведении */
+.order-input:hover + .lbl-icon,
+.order-input:focus + .lbl-icon {
   fill: var(--accent-color);
-}
-
-.lbl-phone {
-  position: relative;
 }
 
 /* примечание в форме заказа */
 .order-note {
-  margin-bottom: 20px;
-  /* height: 120px; */
+  margin-top: 4px;
   padding: 12px 16px;
   resize: none;
+}
+
+.order-note::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* обертка: чекбокс + кнопка отправки */
+.frm-chek-send {
+  margin-top: 20px;
 }
 
 .lbl-chek {
