@@ -379,16 +379,15 @@ body {
 }
 
 .frm-subscribe-field {
-  margin-top: 20px;
   display: flex;
 }
 
 /* призыв подписаться */
 .subscribe-lbl {
+  display: block;
+  margin-bottom: 20px;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  /* расширил действие ховера на линию зазора */
-  padding-bottom: 20px;
 }
 
 .subscribe-lbl:hover,
@@ -476,7 +475,8 @@ form {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  transition-property: background-color, outline-color;
+  transition: background-color var(--transition-duration) var(--timing-function),
+    outline-color var(--transition-duration) var(--timing-function);
 }
 
 .active.btn-order:hover,
@@ -516,7 +516,7 @@ form {
   width: 528px;
   top: 50%;
   left: 50%;
-  padding: 8px 8px 40px 8px;
+  padding: 40px;
   transform: translate3d(-50%, -50%, 0) scale(1) rotate3d(0, 0, 0, 0);
   transition: transform calc(1.5 * var(--transition-duration))
     var(--timing-function);
@@ -540,7 +540,9 @@ form {
 
 /* кнопка закрыть модальное окно */
 .btn-modal-close {
-  position: relative;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   display: block;
@@ -568,11 +570,6 @@ form {
   fill: currentColor;
 }
 
-/* блок для содержимого модального окна */
-.order-box {
-  padding: 0 32px;
-}
-
 /* текст-призыв в форме заказа */
 .text-modal {
   margin-bottom: 12px;
@@ -589,20 +586,29 @@ form {
   letter-spacing: 0.01em;
 }
 
-/* интервал между полями форм */
-.field-item {
+/* обертка для метки + ввод + иконка формы заказа */
+.frm-field-box {
+  position: relative;
   margin-bottom: 10px;
+}
+
+/* метка поля ввода */
+.field-lbl {
+  display: block;
 }
 
 /* поле ввода в форме заказа */
 .order-input {
   width: 100%;
   padding: 12px 0 12px 42px;
+  margin-top: 4px;
   font-size: 16px;
   transition: border var(--transition-duration) var(--timing-function);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: var(--border-radius);
 }
+
+/*  */
 
 .order-input:hover,
 .order-input:focus {
@@ -610,20 +616,14 @@ form {
   border: 1px solid var(--accent-color);
 }
 
-/* обертка для поля ввода и иконки */
-.input-field {
-  position: relative;
-  margin-top: 4px;
-}
-
 /* общий класс для иконок полей ввода формы */
 .lbl-icon {
   position: absolute;
-  top: 50%;
+  bottom: 4px;
   left: 15px;
-  /* left: 15px; */
   transform: translateY(-50%);
   fill: currentColor;
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 
 /* покраска иконок при фокусе и наведении */
@@ -634,18 +634,13 @@ form {
 
 /* примечание в форме заказа */
 .order-note {
-  margin-top: 4px;
+  margin-bottom: 20px;
   padding: 12px 16px;
   resize: none;
 }
 
 .order-note::placeholder {
   color: rgba(117, 117, 117, 0.5);
-}
-
-/* обертка: чекбокс + кнопка отправки */
-.frm-chek-send {
-  margin-top: 20px;
 }
 
 /* оформление метки чекбокса */
@@ -667,8 +662,10 @@ form {
 .icon-check {
   margin-right: 8.38px;
   border-radius: 2px;
-  fill: var(--text-light-color);
+  fill: var(--background-prime-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: background-color var(--transition-duration) var(--timing-function),
+    border var(--transition-duration) var(--timing-function);
 }
 
 /* фокус и ховер на чекбокс */
@@ -917,7 +914,7 @@ form {
   background-color: var(--background-overlay-op);
 }
 
-/* трансыормация оверлея при активации */
+/* трансформация оверлея при активации */
 .project-link:hover .overlay-text,
 .project-link:focus .overlay-text {
   transform: translate3d(0, -100%, 0);
