@@ -587,8 +587,9 @@ form {
 
 /* метка поля ввода */
 .field-lbl {
-  display: block;
+  position: relative;
   margin-bottom: 10px;
+  display: block;
 }
 
 /* поле ввода в форме заказа */
