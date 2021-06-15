@@ -606,6 +606,14 @@ form {
   border: 1px solid var(--accent-color);
 }
 
+/* убираем цвет полей по умолчанию */
+.order-input:hover,
+.order-input:focus,
+.order-input:active,
+.order-input:-webkit-autofill {
+  box-shadow: 0 0 0 200px var(--background-prime-color) inset;
+}
+
 /* общий класс для иконок полей ввода формы */
 .lbl-icon {
   position: absolute;
